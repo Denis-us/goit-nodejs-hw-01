@@ -15,8 +15,6 @@ function listContacts() {
   })
 }
 
-
-
 function getContactById(contactId) {
   fs.readFile(contactsPath, 'utf8', (error, data) => {
     if(error) {
@@ -35,11 +33,8 @@ function getContactById(contactId) {
   
     if(contact === null) {
       console.log(`Contact with ID ${contactId} not found`)
-    }
-
-    
+    } 
 })}
-
 
 
 function addContact(name, email, phone) {
@@ -68,8 +63,6 @@ function addContact(name, email, phone) {
 })}
 
 
-
-
 function removeContact(contactId) {
   fs.readFile(contactsPath, 'utf-8', (error, data) => {
       if (error) {
@@ -82,7 +75,7 @@ function removeContact(contactId) {
       console.log('Contact deleted successfully!')
       console.table(newContacts);
 
-      fs.writeFile(contactsPath, JSON.stringify(newContact, null, 2), error => {
+      fs.writeFile(contactsPath, JSON.stringify(newContacts, null, 2), error => {
         if (error) {
             return console.log('error :', error)
       }

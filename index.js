@@ -18,58 +18,20 @@ const argv = program.opts()
 
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
-    case 'list':
-      // listContacts()
-      //   .then((contacts) => console.table(contacts))
-      //   .catch(console.error)
-
-        case 'list':
-            listContacts();
-
+      case 'list':
+        listContacts();
       break;
 
-    // case 'get':
-    //   getContactById(id)
-    //     .then((contact) => {
-    //       if(contact) {
-    //         console.log('Contact found!')
-    //         console.log(contact)
-    //       } else {
-    //         console.log('Contact not found!')
-    //       }
-    //     })
-    //     .catch(console.error)
-
-          case 'get':
-              getContactById(id);
+      case 'get':
+        getContactById(id);
       break;
 
-    // case 'add':
-    //   addContact(name, email, phone)
-    //     .then((contact) => {
-    //       console.log('Add new contact!')
-    //       console.log(contact)
-    //     })
-    //     .catch(console.error)
-
-          case 'add':
-              addContact(name, email, phone);
+      case 'add':
+        addContact(name, email, phone);
       break;
 
-    // case 'remove':
-    //   removeContact(id)
-    //     .then((contact) => {
-    //       if(contact) {
-    //         console.log('Contact remowed')
-    //       } else {
-    //         console.log('Contact not found!')
-    //       }
-    //     })
-        
-    //     .catch(console.error)
-
-          case 'remove':
-              removeContact(id);
+      case 'remove':
+        removeContact(id);
       break;
 
     default:
